@@ -13,12 +13,14 @@ class SwiftSassTests: XCTestCase {
     
     func testFile() {
         let path = NSBundle(forClass: self.dynamicType).pathForResource("main", ofType: "scss")
-        try! Sass.compileFile(path!)
+        let output = try! Sass.compileFile(path!)
+        print("output: \(output)")
     }
     
     func testString() {
         let path = NSBundle(forClass: self.dynamicType).pathForResource("main", ofType: "scss")
         let string = try! String(contentsOfFile: path!)
-        try! Sass.compile(string)
+        let output = try! Sass.compile(string)
+        print("output: \(output)")
     }
 }
