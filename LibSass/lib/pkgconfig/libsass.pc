@@ -1,0 +1,11 @@
+prefix=/usr/local/Cellar/libsass/HEAD
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libsass
+URL: https://github.com/sass/libsass
+Description: A C implementation of a Sass compiler
+Version: 5e8e
+Libs: -L${libdir} -lsass
+Cflags: -I${includedir}

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SwiftSassTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>swift-sass.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>FD3A8C341B847CEC0069BB59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD3A8D461B85D88C0069BB59</key>
 		<dict>
 			<key>primary</key>
 			<true/>

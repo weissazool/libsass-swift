@@ -9,13 +9,242 @@
 /* Begin PBXBuildFile section */
 		FD3A8C391B847CEC0069BB59 /* SwiftSass.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C381B847CEC0069BB59 /* SwiftSass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD3A8C411B847D1C0069BB59 /* Sass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C401B847D1C0069BB59 /* Sass.swift */; };
+		FD3A8CD11B85D1EA0069BB59 /* ast_def_macros.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C6B1B85D1EA0069BB59 /* ast_def_macros.hpp */; };
+		FD3A8CD21B85D1EA0069BB59 /* ast_factory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C6C1B85D1EA0069BB59 /* ast_factory.hpp */; };
+		FD3A8CD31B85D1EA0069BB59 /* ast_fwd_decl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C6D1B85D1EA0069BB59 /* ast_fwd_decl.hpp */; };
+		FD3A8CD41B85D1EA0069BB59 /* ast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C6E1B85D1EA0069BB59 /* ast.cpp */; };
+		FD3A8CD51B85D1EA0069BB59 /* ast.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C6F1B85D1EA0069BB59 /* ast.hpp */; };
+		FD3A8CD61B85D1EA0069BB59 /* cencode.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C711B85D1EA0069BB59 /* cencode.h */; };
+		FD3A8CD71B85D1EA0069BB59 /* encode.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C721B85D1EA0069BB59 /* encode.h */; };
+		FD3A8CD81B85D1EA0069BB59 /* backtrace.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C731B85D1EA0069BB59 /* backtrace.hpp */; };
+		FD3A8CD91B85D1EA0069BB59 /* base64vlq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C741B85D1EA0069BB59 /* base64vlq.cpp */; };
+		FD3A8CDA1B85D1EA0069BB59 /* base64vlq.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C751B85D1EA0069BB59 /* base64vlq.hpp */; };
+		FD3A8CDB1B85D1EA0069BB59 /* bind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C761B85D1EA0069BB59 /* bind.cpp */; };
+		FD3A8CDC1B85D1EA0069BB59 /* bind.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C771B85D1EA0069BB59 /* bind.hpp */; };
+		FD3A8CDE1B85D1EA0069BB59 /* cencode.c in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C791B85D1EA0069BB59 /* cencode.c */; };
+		FD3A8CDF1B85D1EA0069BB59 /* color_maps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C7A1B85D1EA0069BB59 /* color_maps.cpp */; };
+		FD3A8CE01B85D1EA0069BB59 /* color_maps.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C7B1B85D1EA0069BB59 /* color_maps.hpp */; };
+		FD3A8CE11B85D1EA0069BB59 /* constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C7C1B85D1EA0069BB59 /* constants.cpp */; };
+		FD3A8CE21B85D1EA0069BB59 /* constants.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C7D1B85D1EA0069BB59 /* constants.hpp */; };
+		FD3A8CE31B85D1EA0069BB59 /* context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C7E1B85D1EA0069BB59 /* context.cpp */; };
+		FD3A8CE41B85D1EA0069BB59 /* context.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C7F1B85D1EA0069BB59 /* context.hpp */; };
+		FD3A8CE51B85D1EA0069BB59 /* cssize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C801B85D1EA0069BB59 /* cssize.cpp */; };
+		FD3A8CE61B85D1EA0069BB59 /* cssize.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C811B85D1EA0069BB59 /* cssize.hpp */; };
+		FD3A8CE71B85D1EA0069BB59 /* debug.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C821B85D1EA0069BB59 /* debug.hpp */; };
+		FD3A8CE81B85D1EA0069BB59 /* debugger.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C831B85D1EA0069BB59 /* debugger.hpp */; };
+		FD3A8CE91B85D1EA0069BB59 /* emitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C841B85D1EA0069BB59 /* emitter.cpp */; };
+		FD3A8CEA1B85D1EA0069BB59 /* emitter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C851B85D1EA0069BB59 /* emitter.hpp */; };
+		FD3A8CEB1B85D1EA0069BB59 /* environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C861B85D1EA0069BB59 /* environment.cpp */; };
+		FD3A8CEC1B85D1EA0069BB59 /* environment.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C871B85D1EA0069BB59 /* environment.hpp */; };
+		FD3A8CED1B85D1EA0069BB59 /* error_handling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C881B85D1EA0069BB59 /* error_handling.cpp */; };
+		FD3A8CEE1B85D1EA0069BB59 /* error_handling.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C891B85D1EA0069BB59 /* error_handling.hpp */; };
+		FD3A8CEF1B85D1EA0069BB59 /* eval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C8A1B85D1EA0069BB59 /* eval.cpp */; };
+		FD3A8CF01B85D1EA0069BB59 /* eval.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C8B1B85D1EA0069BB59 /* eval.hpp */; };
+		FD3A8CF11B85D1EA0069BB59 /* expand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C8C1B85D1EA0069BB59 /* expand.cpp */; };
+		FD3A8CF21B85D1EA0069BB59 /* expand.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C8D1B85D1EA0069BB59 /* expand.hpp */; };
+		FD3A8CF31B85D1EA0069BB59 /* extend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C8E1B85D1EA0069BB59 /* extend.cpp */; };
+		FD3A8CF41B85D1EA0069BB59 /* extend.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C8F1B85D1EA0069BB59 /* extend.hpp */; };
+		FD3A8CF51B85D1EA0069BB59 /* file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C901B85D1EA0069BB59 /* file.cpp */; };
+		FD3A8CF61B85D1EA0069BB59 /* file.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C911B85D1EA0069BB59 /* file.hpp */; };
+		FD3A8CF71B85D1EA0069BB59 /* functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C921B85D1EA0069BB59 /* functions.cpp */; };
+		FD3A8CF81B85D1EA0069BB59 /* functions.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C931B85D1EA0069BB59 /* functions.hpp */; };
+		FD3A8CF91B85D1EA0069BB59 /* GNUmakefile.am in Resources */ = {isa = PBXBuildFile; fileRef = FD3A8C941B85D1EA0069BB59 /* GNUmakefile.am */; };
+		FD3A8CFA1B85D1EA0069BB59 /* inspect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C951B85D1EA0069BB59 /* inspect.cpp */; };
+		FD3A8CFB1B85D1EA0069BB59 /* inspect.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C961B85D1EA0069BB59 /* inspect.hpp */; };
+		FD3A8CFC1B85D1EA0069BB59 /* json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C971B85D1EA0069BB59 /* json.cpp */; };
+		FD3A8CFD1B85D1EA0069BB59 /* json.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C981B85D1EA0069BB59 /* json.hpp */; };
+		FD3A8CFE1B85D1EA0069BB59 /* kwd_arg_macros.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C991B85D1EA0069BB59 /* kwd_arg_macros.hpp */; };
+		FD3A8CFF1B85D1EA0069BB59 /* lexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C9A1B85D1EA0069BB59 /* lexer.cpp */; };
+		FD3A8D001B85D1EA0069BB59 /* lexer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C9B1B85D1EA0069BB59 /* lexer.hpp */; };
+		FD3A8D011B85D1EA0069BB59 /* listize.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C9C1B85D1EA0069BB59 /* listize.cpp */; };
+		FD3A8D021B85D1EA0069BB59 /* listize.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C9D1B85D1EA0069BB59 /* listize.hpp */; };
+		FD3A8D031B85D1EA0069BB59 /* mapping.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C9E1B85D1EA0069BB59 /* mapping.hpp */; };
+		FD3A8D041B85D1EA0069BB59 /* memory_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C9F1B85D1EA0069BB59 /* memory_manager.cpp */; };
+		FD3A8D051B85D1EA0069BB59 /* memory_manager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CA01B85D1EA0069BB59 /* memory_manager.hpp */; };
+		FD3A8D061B85D1EA0069BB59 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CA11B85D1EA0069BB59 /* node.cpp */; };
+		FD3A8D071B85D1EA0069BB59 /* node.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CA21B85D1EA0069BB59 /* node.hpp */; };
+		FD3A8D081B85D1EA0069BB59 /* operation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CA31B85D1EA0069BB59 /* operation.hpp */; };
+		FD3A8D091B85D1EA0069BB59 /* output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CA41B85D1EA0069BB59 /* output.cpp */; };
+		FD3A8D0A1B85D1EA0069BB59 /* output.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CA51B85D1EA0069BB59 /* output.hpp */; };
+		FD3A8D0B1B85D1EA0069BB59 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CA61B85D1EA0069BB59 /* parser.cpp */; };
+		FD3A8D0C1B85D1EA0069BB59 /* parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CA71B85D1EA0069BB59 /* parser.hpp */; };
+		FD3A8D0D1B85D1EA0069BB59 /* paths.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CA81B85D1EA0069BB59 /* paths.hpp */; };
+		FD3A8D0E1B85D1EA0069BB59 /* plugins.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CA91B85D1EA0069BB59 /* plugins.cpp */; };
+		FD3A8D0F1B85D1EA0069BB59 /* plugins.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CAA1B85D1EA0069BB59 /* plugins.hpp */; };
+		FD3A8D101B85D1EA0069BB59 /* position.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CAB1B85D1EA0069BB59 /* position.cpp */; };
+		FD3A8D111B85D1EA0069BB59 /* position.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CAC1B85D1EA0069BB59 /* position.hpp */; };
+		FD3A8D121B85D1EA0069BB59 /* prelexer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CAD1B85D1EA0069BB59 /* prelexer.cpp */; };
+		FD3A8D131B85D1EA0069BB59 /* prelexer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CAE1B85D1EA0069BB59 /* prelexer.hpp */; };
+		FD3A8D141B85D1EA0069BB59 /* remove_placeholders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CAF1B85D1EA0069BB59 /* remove_placeholders.cpp */; };
+		FD3A8D151B85D1EA0069BB59 /* remove_placeholders.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CB01B85D1EA0069BB59 /* remove_placeholders.hpp */; };
+		FD3A8D161B85D1EA0069BB59 /* sass_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CB11B85D1EA0069BB59 /* sass_context.cpp */; };
+		FD3A8D171B85D1EA0069BB59 /* sass_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CB21B85D1EA0069BB59 /* sass_functions.cpp */; };
+		FD3A8D181B85D1EA0069BB59 /* sass_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CB31B85D1EA0069BB59 /* sass_interface.cpp */; };
+		FD3A8D191B85D1EA0069BB59 /* sass_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CB41B85D1EA0069BB59 /* sass_util.cpp */; };
+		FD3A8D1A1B85D1EA0069BB59 /* sass_util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CB51B85D1EA0069BB59 /* sass_util.hpp */; };
+		FD3A8D1B1B85D1EA0069BB59 /* sass_values.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CB61B85D1EA0069BB59 /* sass_values.cpp */; };
+		FD3A8D1C1B85D1EA0069BB59 /* sass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CB71B85D1EA0069BB59 /* sass.cpp */; };
+		FD3A8D1D1B85D1EA0069BB59 /* sass2scss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CB81B85D1EA0069BB59 /* sass2scss.cpp */; };
+		FD3A8D1E1B85D1EA0069BB59 /* source_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CB91B85D1EA0069BB59 /* source_map.cpp */; };
+		FD3A8D1F1B85D1EA0069BB59 /* source_map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CBA1B85D1EA0069BB59 /* source_map.hpp */; };
+		FD3A8D201B85D1EA0069BB59 /* subset_map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CBB1B85D1EA0069BB59 /* subset_map.hpp */; };
+		FD3A8D211B85D1EA0069BB59 /* libsass.pc.in in Resources */ = {isa = PBXBuildFile; fileRef = FD3A8CBD1B85D1EA0069BB59 /* libsass.pc.in */; };
+		FD3A8D221B85D1EA0069BB59 /* to_c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CBE1B85D1EA0069BB59 /* to_c.cpp */; };
+		FD3A8D231B85D1EA0069BB59 /* to_c.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CBF1B85D1EA0069BB59 /* to_c.hpp */; };
+		FD3A8D241B85D1EA0069BB59 /* to_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CC01B85D1EA0069BB59 /* to_string.cpp */; };
+		FD3A8D251B85D1EA0069BB59 /* to_string.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CC11B85D1EA0069BB59 /* to_string.hpp */; };
+		FD3A8D261B85D1EA0069BB59 /* to_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CC21B85D1EA0069BB59 /* to_value.cpp */; };
+		FD3A8D271B85D1EA0069BB59 /* to_value.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CC31B85D1EA0069BB59 /* to_value.hpp */; };
+		FD3A8D281B85D1EA0069BB59 /* units.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CC41B85D1EA0069BB59 /* units.cpp */; };
+		FD3A8D291B85D1EA0069BB59 /* units.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CC51B85D1EA0069BB59 /* units.hpp */; };
+		FD3A8D2A1B85D1EA0069BB59 /* checked.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CC71B85D1EA0069BB59 /* checked.h */; };
+		FD3A8D2B1B85D1EA0069BB59 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CC81B85D1EA0069BB59 /* core.h */; };
+		FD3A8D2C1B85D1EA0069BB59 /* unchecked.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CC91B85D1EA0069BB59 /* unchecked.h */; };
+		FD3A8D2D1B85D1EA0069BB59 /* utf8_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CCA1B85D1EA0069BB59 /* utf8_string.cpp */; };
+		FD3A8D2E1B85D1EA0069BB59 /* utf8_string.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CCB1B85D1EA0069BB59 /* utf8_string.hpp */; };
+		FD3A8D2F1B85D1EA0069BB59 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CCC1B85D1EA0069BB59 /* utf8.h */; };
+		FD3A8D301B85D1EA0069BB59 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CCD1B85D1EA0069BB59 /* util.cpp */; };
+		FD3A8D311B85D1EA0069BB59 /* util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CCE1B85D1EA0069BB59 /* util.hpp */; };
+		FD3A8D321B85D1EA0069BB59 /* values.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8CCF1B85D1EA0069BB59 /* values.cpp */; };
+		FD3A8D331B85D1EA0069BB59 /* values.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8CD01B85D1EA0069BB59 /* values.hpp */; };
+		FD3A8D3B1B85D22E0069BB59 /* sass.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D351B85D22E0069BB59 /* sass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3A8D3C1B85D22E0069BB59 /* sass2scss.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D361B85D22E0069BB59 /* sass2scss.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3A8D3D1B85D22E0069BB59 /* sass_context.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D371B85D22E0069BB59 /* sass_context.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3A8D3E1B85D22E0069BB59 /* sass_functions.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D381B85D22E0069BB59 /* sass_functions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3A8D3F1B85D22E0069BB59 /* sass_values.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D391B85D22E0069BB59 /* sass_values.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3A8D401B85D22E0069BB59 /* sass_version.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D3A1B85D22E0069BB59 /* sass_version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3A8D421B85D5FA0069BB59 /* sass_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D411B85D5FA0069BB59 /* sass_interface.h */; };
+		FD3A8D4A1B85D88C0069BB59 /* SwiftSassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8D491B85D88C0069BB59 /* SwiftSassTests.swift */; };
+		FD3A8D4C1B85D88C0069BB59 /* SwiftSass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3A8C351B847CEC0069BB59 /* SwiftSass.framework */; };
+		FD3A8D531B85DAD90069BB59 /* main.scss in Resources */ = {isa = PBXBuildFile; fileRef = FD3A8D521B85DAD90069BB59 /* main.scss */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD3A8D4D1B85D88C0069BB59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD3A8C2C1B847CEC0069BB59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD3A8C341B847CEC0069BB59;
+			remoteInfo = "swift-sass";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FD3A8C351B847CEC0069BB59 /* SwiftSass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3A8C381B847CEC0069BB59 /* SwiftSass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSass.h; sourceTree = "<group>"; };
 		FD3A8C3A1B847CEC0069BB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3A8C401B847D1C0069BB59 /* Sass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sass.swift; sourceTree = "<group>"; };
+		FD3A8C641B85CE430069BB59 /* libsass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsass.a; path = LibSass/lib/libsass.a; sourceTree = "<group>"; };
+		FD3A8C6B1B85D1EA0069BB59 /* ast_def_macros.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ast_def_macros.hpp; path = LibSass/src/ast_def_macros.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C6C1B85D1EA0069BB59 /* ast_factory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ast_factory.hpp; path = LibSass/src/ast_factory.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C6D1B85D1EA0069BB59 /* ast_fwd_decl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ast_fwd_decl.hpp; path = LibSass/src/ast_fwd_decl.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C6E1B85D1EA0069BB59 /* ast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ast.cpp; path = LibSass/src/ast.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C6F1B85D1EA0069BB59 /* ast.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ast.hpp; path = LibSass/src/ast.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C711B85D1EA0069BB59 /* cencode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cencode.h; sourceTree = "<group>"; };
+		FD3A8C721B85D1EA0069BB59 /* encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = encode.h; sourceTree = "<group>"; };
+		FD3A8C731B85D1EA0069BB59 /* backtrace.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = backtrace.hpp; path = LibSass/src/backtrace.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C741B85D1EA0069BB59 /* base64vlq.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64vlq.cpp; path = LibSass/src/base64vlq.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C751B85D1EA0069BB59 /* base64vlq.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = base64vlq.hpp; path = LibSass/src/base64vlq.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C761B85D1EA0069BB59 /* bind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bind.cpp; path = LibSass/src/bind.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C771B85D1EA0069BB59 /* bind.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = bind.hpp; path = LibSass/src/bind.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C781B85D1EA0069BB59 /* c99func.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = c99func.c; path = LibSass/src/c99func.c; sourceTree = SOURCE_ROOT; };
+		FD3A8C791B85D1EA0069BB59 /* cencode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cencode.c; path = LibSass/src/cencode.c; sourceTree = SOURCE_ROOT; };
+		FD3A8C7A1B85D1EA0069BB59 /* color_maps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = color_maps.cpp; path = LibSass/src/color_maps.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C7B1B85D1EA0069BB59 /* color_maps.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = color_maps.hpp; path = LibSass/src/color_maps.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C7C1B85D1EA0069BB59 /* constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = constants.cpp; path = LibSass/src/constants.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C7D1B85D1EA0069BB59 /* constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = constants.hpp; path = LibSass/src/constants.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C7E1B85D1EA0069BB59 /* context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = context.cpp; path = LibSass/src/context.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C7F1B85D1EA0069BB59 /* context.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = context.hpp; path = LibSass/src/context.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C801B85D1EA0069BB59 /* cssize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cssize.cpp; path = LibSass/src/cssize.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C811B85D1EA0069BB59 /* cssize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cssize.hpp; path = LibSass/src/cssize.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C821B85D1EA0069BB59 /* debug.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = debug.hpp; path = LibSass/src/debug.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C831B85D1EA0069BB59 /* debugger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = debugger.hpp; path = LibSass/src/debugger.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C841B85D1EA0069BB59 /* emitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = emitter.cpp; path = LibSass/src/emitter.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C851B85D1EA0069BB59 /* emitter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = emitter.hpp; path = LibSass/src/emitter.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C861B85D1EA0069BB59 /* environment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = environment.cpp; path = LibSass/src/environment.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C871B85D1EA0069BB59 /* environment.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = environment.hpp; path = LibSass/src/environment.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C881B85D1EA0069BB59 /* error_handling.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = error_handling.cpp; path = LibSass/src/error_handling.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C891B85D1EA0069BB59 /* error_handling.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = error_handling.hpp; path = LibSass/src/error_handling.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C8A1B85D1EA0069BB59 /* eval.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = eval.cpp; path = LibSass/src/eval.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C8B1B85D1EA0069BB59 /* eval.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = eval.hpp; path = LibSass/src/eval.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C8C1B85D1EA0069BB59 /* expand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = expand.cpp; path = LibSass/src/expand.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C8D1B85D1EA0069BB59 /* expand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = expand.hpp; path = LibSass/src/expand.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C8E1B85D1EA0069BB59 /* extend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = extend.cpp; path = LibSass/src/extend.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C8F1B85D1EA0069BB59 /* extend.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = extend.hpp; path = LibSass/src/extend.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C901B85D1EA0069BB59 /* file.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = file.cpp; path = LibSass/src/file.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C911B85D1EA0069BB59 /* file.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = file.hpp; path = LibSass/src/file.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C921B85D1EA0069BB59 /* functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = functions.cpp; path = LibSass/src/functions.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C931B85D1EA0069BB59 /* functions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = functions.hpp; path = LibSass/src/functions.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C941B85D1EA0069BB59 /* GNUmakefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GNUmakefile.am; path = LibSass/src/GNUmakefile.am; sourceTree = SOURCE_ROOT; };
+		FD3A8C951B85D1EA0069BB59 /* inspect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = inspect.cpp; path = LibSass/src/inspect.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C961B85D1EA0069BB59 /* inspect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = inspect.hpp; path = LibSass/src/inspect.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C971B85D1EA0069BB59 /* json.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = json.cpp; path = LibSass/src/json.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C981B85D1EA0069BB59 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = LibSass/src/json.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C991B85D1EA0069BB59 /* kwd_arg_macros.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = kwd_arg_macros.hpp; path = LibSass/src/kwd_arg_macros.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C9A1B85D1EA0069BB59 /* lexer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lexer.cpp; path = LibSass/src/lexer.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C9B1B85D1EA0069BB59 /* lexer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = lexer.hpp; path = LibSass/src/lexer.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C9C1B85D1EA0069BB59 /* listize.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = listize.cpp; path = LibSass/src/listize.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C9D1B85D1EA0069BB59 /* listize.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = listize.hpp; path = LibSass/src/listize.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C9E1B85D1EA0069BB59 /* mapping.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = mapping.hpp; path = LibSass/src/mapping.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8C9F1B85D1EA0069BB59 /* memory_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = memory_manager.cpp; path = LibSass/src/memory_manager.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA01B85D1EA0069BB59 /* memory_manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = memory_manager.hpp; path = LibSass/src/memory_manager.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA11B85D1EA0069BB59 /* node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = node.cpp; path = LibSass/src/node.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA21B85D1EA0069BB59 /* node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = node.hpp; path = LibSass/src/node.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA31B85D1EA0069BB59 /* operation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = operation.hpp; path = LibSass/src/operation.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA41B85D1EA0069BB59 /* output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = output.cpp; path = LibSass/src/output.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA51B85D1EA0069BB59 /* output.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = output.hpp; path = LibSass/src/output.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA61B85D1EA0069BB59 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = parser.cpp; path = LibSass/src/parser.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA71B85D1EA0069BB59 /* parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = parser.hpp; path = LibSass/src/parser.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA81B85D1EA0069BB59 /* paths.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = paths.hpp; path = LibSass/src/paths.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CA91B85D1EA0069BB59 /* plugins.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = plugins.cpp; path = LibSass/src/plugins.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CAA1B85D1EA0069BB59 /* plugins.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = plugins.hpp; path = LibSass/src/plugins.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CAB1B85D1EA0069BB59 /* position.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = position.cpp; path = LibSass/src/position.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CAC1B85D1EA0069BB59 /* position.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = position.hpp; path = LibSass/src/position.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CAD1B85D1EA0069BB59 /* prelexer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = prelexer.cpp; path = LibSass/src/prelexer.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CAE1B85D1EA0069BB59 /* prelexer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = prelexer.hpp; path = LibSass/src/prelexer.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CAF1B85D1EA0069BB59 /* remove_placeholders.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = remove_placeholders.cpp; path = LibSass/src/remove_placeholders.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB01B85D1EA0069BB59 /* remove_placeholders.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = remove_placeholders.hpp; path = LibSass/src/remove_placeholders.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB11B85D1EA0069BB59 /* sass_context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sass_context.cpp; path = LibSass/src/sass_context.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB21B85D1EA0069BB59 /* sass_functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sass_functions.cpp; path = LibSass/src/sass_functions.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB31B85D1EA0069BB59 /* sass_interface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sass_interface.cpp; path = LibSass/src/sass_interface.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB41B85D1EA0069BB59 /* sass_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sass_util.cpp; path = LibSass/src/sass_util.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB51B85D1EA0069BB59 /* sass_util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = sass_util.hpp; path = LibSass/src/sass_util.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB61B85D1EA0069BB59 /* sass_values.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sass_values.cpp; path = LibSass/src/sass_values.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB71B85D1EA0069BB59 /* sass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sass.cpp; path = LibSass/src/sass.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB81B85D1EA0069BB59 /* sass2scss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sass2scss.cpp; path = LibSass/src/sass2scss.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CB91B85D1EA0069BB59 /* source_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = source_map.cpp; path = LibSass/src/source_map.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CBA1B85D1EA0069BB59 /* source_map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = source_map.hpp; path = LibSass/src/source_map.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CBB1B85D1EA0069BB59 /* subset_map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = subset_map.hpp; path = LibSass/src/subset_map.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CBD1B85D1EA0069BB59 /* libsass.pc.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libsass.pc.in; sourceTree = "<group>"; };
+		FD3A8CBE1B85D1EA0069BB59 /* to_c.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = to_c.cpp; path = LibSass/src/to_c.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CBF1B85D1EA0069BB59 /* to_c.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = to_c.hpp; path = LibSass/src/to_c.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CC01B85D1EA0069BB59 /* to_string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = to_string.cpp; path = LibSass/src/to_string.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CC11B85D1EA0069BB59 /* to_string.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = to_string.hpp; path = LibSass/src/to_string.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CC21B85D1EA0069BB59 /* to_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = to_value.cpp; path = LibSass/src/to_value.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CC31B85D1EA0069BB59 /* to_value.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = to_value.hpp; path = LibSass/src/to_value.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CC41B85D1EA0069BB59 /* units.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = units.cpp; path = LibSass/src/units.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CC51B85D1EA0069BB59 /* units.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = units.hpp; path = LibSass/src/units.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CC71B85D1EA0069BB59 /* checked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checked.h; sourceTree = "<group>"; };
+		FD3A8CC81B85D1EA0069BB59 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		FD3A8CC91B85D1EA0069BB59 /* unchecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unchecked.h; sourceTree = "<group>"; };
+		FD3A8CCA1B85D1EA0069BB59 /* utf8_string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utf8_string.cpp; path = LibSass/src/utf8_string.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CCB1B85D1EA0069BB59 /* utf8_string.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = utf8_string.hpp; path = LibSass/src/utf8_string.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CCC1B85D1EA0069BB59 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = LibSass/src/utf8.h; sourceTree = SOURCE_ROOT; };
+		FD3A8CCD1B85D1EA0069BB59 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = util.cpp; path = LibSass/src/util.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CCE1B85D1EA0069BB59 /* util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = util.hpp; path = LibSass/src/util.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CCF1B85D1EA0069BB59 /* values.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = values.cpp; path = LibSass/src/values.cpp; sourceTree = SOURCE_ROOT; };
+		FD3A8CD01B85D1EA0069BB59 /* values.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = values.hpp; path = LibSass/src/values.hpp; sourceTree = SOURCE_ROOT; };
+		FD3A8D351B85D22E0069BB59 /* sass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sass.h; sourceTree = "<group>"; };
+		FD3A8D361B85D22E0069BB59 /* sass2scss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sass2scss.h; sourceTree = "<group>"; };
+		FD3A8D371B85D22E0069BB59 /* sass_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sass_context.h; sourceTree = "<group>"; };
+		FD3A8D381B85D22E0069BB59 /* sass_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sass_functions.h; sourceTree = "<group>"; };
+		FD3A8D391B85D22E0069BB59 /* sass_values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sass_values.h; sourceTree = "<group>"; };
+		FD3A8D3A1B85D22E0069BB59 /* sass_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sass_version.h; sourceTree = "<group>"; };
+		FD3A8D411B85D5FA0069BB59 /* sass_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sass_interface.h; sourceTree = "<group>"; };
+		FD3A8D471B85D88C0069BB59 /* SwiftSassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3A8D491B85D88C0069BB59 /* SwiftSassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSassTests.swift; sourceTree = "<group>"; };
+		FD3A8D4B1B85D88C0069BB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD3A8D521B85DAD90069BB59 /* main.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.scss; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +255,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FD3A8D441B85D88C0069BB59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3A8D4C1B85D88C0069BB59 /* SwiftSass.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,7 +270,9 @@
 			isa = PBXGroup;
 			children = (
 				FD3A8C371B847CEC0069BB59 /* swift-sass */,
+				FD3A8D481B85D88C0069BB59 /* SwiftSassTests */,
 				FD3A8C361B847CEC0069BB59 /* Products */,
+				FD3A8C441B847FD90069BB59 /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				FD3A8C351B847CEC0069BB59 /* SwiftSass.framework */,
+				FD3A8D471B85D88C0069BB59 /* SwiftSassTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,11 +288,179 @@
 		FD3A8C371B847CEC0069BB59 /* swift-sass */ = {
 			isa = PBXGroup;
 			children = (
+				FD3A8C6A1B85D1D20069BB59 /* LibSass */,
 				FD3A8C381B847CEC0069BB59 /* SwiftSass.h */,
 				FD3A8C3A1B847CEC0069BB59 /* Info.plist */,
 				FD3A8C401B847D1C0069BB59 /* Sass.swift */,
 			);
 			path = "swift-sass";
+			sourceTree = "<group>";
+		};
+		FD3A8C441B847FD90069BB59 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A8C641B85CE430069BB59 /* libsass.a */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		FD3A8C6A1B85D1D20069BB59 /* LibSass */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A8D341B85D22E0069BB59 /* include */,
+				FD3A8C6B1B85D1EA0069BB59 /* ast_def_macros.hpp */,
+				FD3A8C6C1B85D1EA0069BB59 /* ast_factory.hpp */,
+				FD3A8C6D1B85D1EA0069BB59 /* ast_fwd_decl.hpp */,
+				FD3A8C6E1B85D1EA0069BB59 /* ast.cpp */,
+				FD3A8C6F1B85D1EA0069BB59 /* ast.hpp */,
+				FD3A8C701B85D1EA0069BB59 /* b64 */,
+				FD3A8C731B85D1EA0069BB59 /* backtrace.hpp */,
+				FD3A8C741B85D1EA0069BB59 /* base64vlq.cpp */,
+				FD3A8C751B85D1EA0069BB59 /* base64vlq.hpp */,
+				FD3A8C761B85D1EA0069BB59 /* bind.cpp */,
+				FD3A8C771B85D1EA0069BB59 /* bind.hpp */,
+				FD3A8C781B85D1EA0069BB59 /* c99func.c */,
+				FD3A8C791B85D1EA0069BB59 /* cencode.c */,
+				FD3A8C7A1B85D1EA0069BB59 /* color_maps.cpp */,
+				FD3A8C7B1B85D1EA0069BB59 /* color_maps.hpp */,
+				FD3A8C7C1B85D1EA0069BB59 /* constants.cpp */,
+				FD3A8C7D1B85D1EA0069BB59 /* constants.hpp */,
+				FD3A8C7E1B85D1EA0069BB59 /* context.cpp */,
+				FD3A8C7F1B85D1EA0069BB59 /* context.hpp */,
+				FD3A8C801B85D1EA0069BB59 /* cssize.cpp */,
+				FD3A8C811B85D1EA0069BB59 /* cssize.hpp */,
+				FD3A8C821B85D1EA0069BB59 /* debug.hpp */,
+				FD3A8C831B85D1EA0069BB59 /* debugger.hpp */,
+				FD3A8C841B85D1EA0069BB59 /* emitter.cpp */,
+				FD3A8C851B85D1EA0069BB59 /* emitter.hpp */,
+				FD3A8C861B85D1EA0069BB59 /* environment.cpp */,
+				FD3A8C871B85D1EA0069BB59 /* environment.hpp */,
+				FD3A8C881B85D1EA0069BB59 /* error_handling.cpp */,
+				FD3A8C891B85D1EA0069BB59 /* error_handling.hpp */,
+				FD3A8C8A1B85D1EA0069BB59 /* eval.cpp */,
+				FD3A8C8B1B85D1EA0069BB59 /* eval.hpp */,
+				FD3A8C8C1B85D1EA0069BB59 /* expand.cpp */,
+				FD3A8C8D1B85D1EA0069BB59 /* expand.hpp */,
+				FD3A8C8E1B85D1EA0069BB59 /* extend.cpp */,
+				FD3A8C8F1B85D1EA0069BB59 /* extend.hpp */,
+				FD3A8C901B85D1EA0069BB59 /* file.cpp */,
+				FD3A8C911B85D1EA0069BB59 /* file.hpp */,
+				FD3A8C921B85D1EA0069BB59 /* functions.cpp */,
+				FD3A8C931B85D1EA0069BB59 /* functions.hpp */,
+				FD3A8C941B85D1EA0069BB59 /* GNUmakefile.am */,
+				FD3A8C951B85D1EA0069BB59 /* inspect.cpp */,
+				FD3A8C961B85D1EA0069BB59 /* inspect.hpp */,
+				FD3A8C971B85D1EA0069BB59 /* json.cpp */,
+				FD3A8C981B85D1EA0069BB59 /* json.hpp */,
+				FD3A8C991B85D1EA0069BB59 /* kwd_arg_macros.hpp */,
+				FD3A8C9A1B85D1EA0069BB59 /* lexer.cpp */,
+				FD3A8C9B1B85D1EA0069BB59 /* lexer.hpp */,
+				FD3A8C9C1B85D1EA0069BB59 /* listize.cpp */,
+				FD3A8C9D1B85D1EA0069BB59 /* listize.hpp */,
+				FD3A8C9E1B85D1EA0069BB59 /* mapping.hpp */,
+				FD3A8C9F1B85D1EA0069BB59 /* memory_manager.cpp */,
+				FD3A8CA01B85D1EA0069BB59 /* memory_manager.hpp */,
+				FD3A8CA11B85D1EA0069BB59 /* node.cpp */,
+				FD3A8CA21B85D1EA0069BB59 /* node.hpp */,
+				FD3A8CA31B85D1EA0069BB59 /* operation.hpp */,
+				FD3A8CA41B85D1EA0069BB59 /* output.cpp */,
+				FD3A8CA51B85D1EA0069BB59 /* output.hpp */,
+				FD3A8CA61B85D1EA0069BB59 /* parser.cpp */,
+				FD3A8CA71B85D1EA0069BB59 /* parser.hpp */,
+				FD3A8CA81B85D1EA0069BB59 /* paths.hpp */,
+				FD3A8CA91B85D1EA0069BB59 /* plugins.cpp */,
+				FD3A8CAA1B85D1EA0069BB59 /* plugins.hpp */,
+				FD3A8CAB1B85D1EA0069BB59 /* position.cpp */,
+				FD3A8CAC1B85D1EA0069BB59 /* position.hpp */,
+				FD3A8CAD1B85D1EA0069BB59 /* prelexer.cpp */,
+				FD3A8CAE1B85D1EA0069BB59 /* prelexer.hpp */,
+				FD3A8CAF1B85D1EA0069BB59 /* remove_placeholders.cpp */,
+				FD3A8CB01B85D1EA0069BB59 /* remove_placeholders.hpp */,
+				FD3A8CB11B85D1EA0069BB59 /* sass_context.cpp */,
+				FD3A8CB21B85D1EA0069BB59 /* sass_functions.cpp */,
+				FD3A8CB31B85D1EA0069BB59 /* sass_interface.cpp */,
+				FD3A8CB41B85D1EA0069BB59 /* sass_util.cpp */,
+				FD3A8CB51B85D1EA0069BB59 /* sass_util.hpp */,
+				FD3A8CB61B85D1EA0069BB59 /* sass_values.cpp */,
+				FD3A8CB71B85D1EA0069BB59 /* sass.cpp */,
+				FD3A8CB81B85D1EA0069BB59 /* sass2scss.cpp */,
+				FD3A8CB91B85D1EA0069BB59 /* source_map.cpp */,
+				FD3A8CBA1B85D1EA0069BB59 /* source_map.hpp */,
+				FD3A8CBB1B85D1EA0069BB59 /* subset_map.hpp */,
+				FD3A8CBC1B85D1EA0069BB59 /* support */,
+				FD3A8CBE1B85D1EA0069BB59 /* to_c.cpp */,
+				FD3A8CBF1B85D1EA0069BB59 /* to_c.hpp */,
+				FD3A8CC01B85D1EA0069BB59 /* to_string.cpp */,
+				FD3A8CC11B85D1EA0069BB59 /* to_string.hpp */,
+				FD3A8CC21B85D1EA0069BB59 /* to_value.cpp */,
+				FD3A8CC31B85D1EA0069BB59 /* to_value.hpp */,
+				FD3A8CC41B85D1EA0069BB59 /* units.cpp */,
+				FD3A8CC51B85D1EA0069BB59 /* units.hpp */,
+				FD3A8CC61B85D1EA0069BB59 /* utf8 */,
+				FD3A8CCA1B85D1EA0069BB59 /* utf8_string.cpp */,
+				FD3A8CCB1B85D1EA0069BB59 /* utf8_string.hpp */,
+				FD3A8CCC1B85D1EA0069BB59 /* utf8.h */,
+				FD3A8CCD1B85D1EA0069BB59 /* util.cpp */,
+				FD3A8CCE1B85D1EA0069BB59 /* util.hpp */,
+				FD3A8CCF1B85D1EA0069BB59 /* values.cpp */,
+				FD3A8CD01B85D1EA0069BB59 /* values.hpp */,
+			);
+			name = LibSass;
+			sourceTree = "<group>";
+		};
+		FD3A8C701B85D1EA0069BB59 /* b64 */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A8C711B85D1EA0069BB59 /* cencode.h */,
+				FD3A8C721B85D1EA0069BB59 /* encode.h */,
+			);
+			name = b64;
+			path = LibSass/src/b64;
+			sourceTree = SOURCE_ROOT;
+		};
+		FD3A8CBC1B85D1EA0069BB59 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A8CBD1B85D1EA0069BB59 /* libsass.pc.in */,
+			);
+			name = support;
+			path = LibSass/src/support;
+			sourceTree = SOURCE_ROOT;
+		};
+		FD3A8CC61B85D1EA0069BB59 /* utf8 */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A8CC71B85D1EA0069BB59 /* checked.h */,
+				FD3A8CC81B85D1EA0069BB59 /* core.h */,
+				FD3A8CC91B85D1EA0069BB59 /* unchecked.h */,
+			);
+			name = utf8;
+			path = LibSass/src/utf8;
+			sourceTree = SOURCE_ROOT;
+		};
+		FD3A8D341B85D22E0069BB59 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A8D351B85D22E0069BB59 /* sass.h */,
+				FD3A8D411B85D5FA0069BB59 /* sass_interface.h */,
+				FD3A8D361B85D22E0069BB59 /* sass2scss.h */,
+				FD3A8D371B85D22E0069BB59 /* sass_context.h */,
+				FD3A8D381B85D22E0069BB59 /* sass_functions.h */,
+				FD3A8D391B85D22E0069BB59 /* sass_values.h */,
+				FD3A8D3A1B85D22E0069BB59 /* sass_version.h */,
+			);
+			name = include;
+			path = LibSass/include;
+			sourceTree = SOURCE_ROOT;
+		};
+		FD3A8D481B85D88C0069BB59 /* SwiftSassTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD3A8D491B85D88C0069BB59 /* SwiftSassTests.swift */,
+				FD3A8D4B1B85D88C0069BB59 /* Info.plist */,
+				FD3A8D521B85DAD90069BB59 /* main.scss */,
+			);
+			path = SwiftSassTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -62,7 +470,67 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3A8D111B85D1EA0069BB59 /* position.hpp in Headers */,
+				FD3A8D2F1B85D1EA0069BB59 /* utf8.h in Headers */,
+				FD3A8D131B85D1EA0069BB59 /* prelexer.hpp in Headers */,
+				FD3A8CF21B85D1EA0069BB59 /* expand.hpp in Headers */,
+				FD3A8D1F1B85D1EA0069BB59 /* source_map.hpp in Headers */,
+				FD3A8CD31B85D1EA0069BB59 /* ast_fwd_decl.hpp in Headers */,
+				FD3A8D311B85D1EA0069BB59 /* util.hpp in Headers */,
+				FD3A8D1A1B85D1EA0069BB59 /* sass_util.hpp in Headers */,
+				FD3A8D081B85D1EA0069BB59 /* operation.hpp in Headers */,
+				FD3A8CDA1B85D1EA0069BB59 /* base64vlq.hpp in Headers */,
+				FD3A8D071B85D1EA0069BB59 /* node.hpp in Headers */,
+				FD3A8D401B85D22E0069BB59 /* sass_version.h in Headers */,
+				FD3A8D0C1B85D1EA0069BB59 /* parser.hpp in Headers */,
+				FD3A8D3F1B85D22E0069BB59 /* sass_values.h in Headers */,
+				FD3A8D3D1B85D22E0069BB59 /* sass_context.h in Headers */,
+				FD3A8CEE1B85D1EA0069BB59 /* error_handling.hpp in Headers */,
+				FD3A8D2C1B85D1EA0069BB59 /* unchecked.h in Headers */,
+				FD3A8CF01B85D1EA0069BB59 /* eval.hpp in Headers */,
+				FD3A8CFB1B85D1EA0069BB59 /* inspect.hpp in Headers */,
+				FD3A8D0F1B85D1EA0069BB59 /* plugins.hpp in Headers */,
+				FD3A8D0A1B85D1EA0069BB59 /* output.hpp in Headers */,
+				FD3A8D2B1B85D1EA0069BB59 /* core.h in Headers */,
+				FD3A8D331B85D1EA0069BB59 /* values.hpp in Headers */,
+				FD3A8CFD1B85D1EA0069BB59 /* json.hpp in Headers */,
+				FD3A8CD61B85D1EA0069BB59 /* cencode.h in Headers */,
+				FD3A8D001B85D1EA0069BB59 /* lexer.hpp in Headers */,
+				FD3A8D291B85D1EA0069BB59 /* units.hpp in Headers */,
+				FD3A8D2A1B85D1EA0069BB59 /* checked.h in Headers */,
+				FD3A8CF61B85D1EA0069BB59 /* file.hpp in Headers */,
+				FD3A8D201B85D1EA0069BB59 /* subset_map.hpp in Headers */,
+				FD3A8CDC1B85D1EA0069BB59 /* bind.hpp in Headers */,
+				FD3A8CD21B85D1EA0069BB59 /* ast_factory.hpp in Headers */,
+				FD3A8D2E1B85D1EA0069BB59 /* utf8_string.hpp in Headers */,
+				FD3A8D3B1B85D22E0069BB59 /* sass.h in Headers */,
+				FD3A8CE81B85D1EA0069BB59 /* debugger.hpp in Headers */,
+				FD3A8D151B85D1EA0069BB59 /* remove_placeholders.hpp in Headers */,
+				FD3A8D031B85D1EA0069BB59 /* mapping.hpp in Headers */,
+				FD3A8CE71B85D1EA0069BB59 /* debug.hpp in Headers */,
+				FD3A8CD71B85D1EA0069BB59 /* encode.h in Headers */,
+				FD3A8CD81B85D1EA0069BB59 /* backtrace.hpp in Headers */,
+				FD3A8D0D1B85D1EA0069BB59 /* paths.hpp in Headers */,
+				FD3A8CD51B85D1EA0069BB59 /* ast.hpp in Headers */,
+				FD3A8CE21B85D1EA0069BB59 /* constants.hpp in Headers */,
+				FD3A8D251B85D1EA0069BB59 /* to_string.hpp in Headers */,
+				FD3A8CE41B85D1EA0069BB59 /* context.hpp in Headers */,
+				FD3A8D231B85D1EA0069BB59 /* to_c.hpp in Headers */,
+				FD3A8D3C1B85D22E0069BB59 /* sass2scss.h in Headers */,
+				FD3A8CEC1B85D1EA0069BB59 /* environment.hpp in Headers */,
 				FD3A8C391B847CEC0069BB59 /* SwiftSass.h in Headers */,
+				FD3A8D3E1B85D22E0069BB59 /* sass_functions.h in Headers */,
+				FD3A8CD11B85D1EA0069BB59 /* ast_def_macros.hpp in Headers */,
+				FD3A8D421B85D5FA0069BB59 /* sass_interface.h in Headers */,
+				FD3A8CF41B85D1EA0069BB59 /* extend.hpp in Headers */,
+				FD3A8CEA1B85D1EA0069BB59 /* emitter.hpp in Headers */,
+				FD3A8CF81B85D1EA0069BB59 /* functions.hpp in Headers */,
+				FD3A8D051B85D1EA0069BB59 /* memory_manager.hpp in Headers */,
+				FD3A8CE01B85D1EA0069BB59 /* color_maps.hpp in Headers */,
+				FD3A8CE61B85D1EA0069BB59 /* cssize.hpp in Headers */,
+				FD3A8CFE1B85D1EA0069BB59 /* kwd_arg_macros.hpp in Headers */,
+				FD3A8D021B85D1EA0069BB59 /* listize.hpp in Headers */,
+				FD3A8D271B85D1EA0069BB59 /* to_value.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +555,24 @@
 			productReference = FD3A8C351B847CEC0069BB59 /* SwiftSass.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FD3A8D461B85D88C0069BB59 /* SwiftSassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD3A8D4F1B85D88C0069BB59 /* Build configuration list for PBXNativeTarget "SwiftSassTests" */;
+			buildPhases = (
+				FD3A8D431B85D88C0069BB59 /* Sources */,
+				FD3A8D441B85D88C0069BB59 /* Frameworks */,
+				FD3A8D451B85D88C0069BB59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD3A8D4E1B85D88C0069BB59 /* PBXTargetDependency */,
+			);
+			name = SwiftSassTests;
+			productName = SwiftSassTests;
+			productReference = FD3A8D471B85D88C0069BB59 /* SwiftSassTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +584,9 @@
 				ORGANIZATIONNAME = "Invisible Pixel";
 				TargetAttributes = {
 					FD3A8C341B847CEC0069BB59 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					FD3A8D461B85D88C0069BB59 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
@@ -115,6 +604,7 @@
 			projectRoot = "";
 			targets = (
 				FD3A8C341B847CEC0069BB59 /* swift-sass */,
+				FD3A8D461B85D88C0069BB59 /* SwiftSassTests */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +614,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3A8D211B85D1EA0069BB59 /* libsass.pc.in in Resources */,
+				FD3A8CF91B85D1EA0069BB59 /* GNUmakefile.am in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3A8D451B85D88C0069BB59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3A8D531B85DAD90069BB59 /* main.scss in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,11 +634,70 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3A8D091B85D1EA0069BB59 /* output.cpp in Sources */,
+				FD3A8D2D1B85D1EA0069BB59 /* utf8_string.cpp in Sources */,
+				FD3A8CD41B85D1EA0069BB59 /* ast.cpp in Sources */,
+				FD3A8CF31B85D1EA0069BB59 /* extend.cpp in Sources */,
+				FD3A8CF71B85D1EA0069BB59 /* functions.cpp in Sources */,
 				FD3A8C411B847D1C0069BB59 /* Sass.swift in Sources */,
+				FD3A8CD91B85D1EA0069BB59 /* base64vlq.cpp in Sources */,
+				FD3A8CDB1B85D1EA0069BB59 /* bind.cpp in Sources */,
+				FD3A8D181B85D1EA0069BB59 /* sass_interface.cpp in Sources */,
+				FD3A8D041B85D1EA0069BB59 /* memory_manager.cpp in Sources */,
+				FD3A8CE11B85D1EA0069BB59 /* constants.cpp in Sources */,
+				FD3A8D0E1B85D1EA0069BB59 /* plugins.cpp in Sources */,
+				FD3A8D321B85D1EA0069BB59 /* values.cpp in Sources */,
+				FD3A8D1D1B85D1EA0069BB59 /* sass2scss.cpp in Sources */,
+				FD3A8CE91B85D1EA0069BB59 /* emitter.cpp in Sources */,
+				FD3A8D241B85D1EA0069BB59 /* to_string.cpp in Sources */,
+				FD3A8D011B85D1EA0069BB59 /* listize.cpp in Sources */,
+				FD3A8D1E1B85D1EA0069BB59 /* source_map.cpp in Sources */,
+				FD3A8D191B85D1EA0069BB59 /* sass_util.cpp in Sources */,
+				FD3A8CE51B85D1EA0069BB59 /* cssize.cpp in Sources */,
+				FD3A8CEF1B85D1EA0069BB59 /* eval.cpp in Sources */,
+				FD3A8CFC1B85D1EA0069BB59 /* json.cpp in Sources */,
+				FD3A8D121B85D1EA0069BB59 /* prelexer.cpp in Sources */,
+				FD3A8CEB1B85D1EA0069BB59 /* environment.cpp in Sources */,
+				FD3A8D171B85D1EA0069BB59 /* sass_functions.cpp in Sources */,
+				FD3A8D261B85D1EA0069BB59 /* to_value.cpp in Sources */,
+				FD3A8CF51B85D1EA0069BB59 /* file.cpp in Sources */,
+				FD3A8CDE1B85D1EA0069BB59 /* cencode.c in Sources */,
+				FD3A8D1C1B85D1EA0069BB59 /* sass.cpp in Sources */,
+				FD3A8CF11B85D1EA0069BB59 /* expand.cpp in Sources */,
+				FD3A8D061B85D1EA0069BB59 /* node.cpp in Sources */,
+				FD3A8D281B85D1EA0069BB59 /* units.cpp in Sources */,
+				FD3A8D1B1B85D1EA0069BB59 /* sass_values.cpp in Sources */,
+				FD3A8CFF1B85D1EA0069BB59 /* lexer.cpp in Sources */,
+				FD3A8CE31B85D1EA0069BB59 /* context.cpp in Sources */,
+				FD3A8D101B85D1EA0069BB59 /* position.cpp in Sources */,
+				FD3A8D0B1B85D1EA0069BB59 /* parser.cpp in Sources */,
+				FD3A8CDF1B85D1EA0069BB59 /* color_maps.cpp in Sources */,
+				FD3A8D301B85D1EA0069BB59 /* util.cpp in Sources */,
+				FD3A8D141B85D1EA0069BB59 /* remove_placeholders.cpp in Sources */,
+				FD3A8CFA1B85D1EA0069BB59 /* inspect.cpp in Sources */,
+				FD3A8CED1B85D1EA0069BB59 /* error_handling.cpp in Sources */,
+				FD3A8D221B85D1EA0069BB59 /* to_c.cpp in Sources */,
+				FD3A8D161B85D1EA0069BB59 /* sass_context.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD3A8D431B85D88C0069BB59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3A8D4A1B85D88C0069BB59 /* SwiftSassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD3A8D4E1B85D88C0069BB59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD3A8C341B847CEC0069BB59 /* swift-sass */;
+			targetProxy = FD3A8D4D1B85D88C0069BB59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FD3A8C3B1B847CEC0069BB59 /* Debug */ = {
@@ -238,6 +797,10 @@
 				INFOPLIST_FILE = "swift-sass/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LibSass/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.invisiblepixel.swift-sass";
 				PRODUCT_NAME = SwiftSass;
 				SKIP_INSTALL = YES;
@@ -258,9 +821,35 @@
 				INFOPLIST_FILE = "swift-sass/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LibSass/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.invisiblepixel.swift-sass";
 				PRODUCT_NAME = SwiftSass;
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FD3A8D501B85D88C0069BB59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftSassTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.SwiftSassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FD3A8D511B85D88C0069BB59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftSassTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.invisiblepixel.SwiftSassTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -281,6 +870,14 @@
 			buildConfigurations = (
 				FD3A8C3E1B847CEC0069BB59 /* Debug */,
 				FD3A8C3F1B847CEC0069BB59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FD3A8D4F1B85D88C0069BB59 /* Build configuration list for PBXNativeTarget "SwiftSassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD3A8D501B85D88C0069BB59 /* Debug */,
+				FD3A8D511B85D88C0069BB59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
