@@ -14,4 +14,8 @@ FOUNDATION_EXPORT double swift_sassVersionNumber;
 //! Project version string for swift-sass.
 FOUNDATION_EXPORT const unsigned char swift_sassVersionString[];
 
+#import <SwiftSass/sass.h>
 #import <SwiftSass/sass_context.h>
+#import <SwiftSass/sass_interface.h>
+#import <SwiftSass/sass2scss.h>
+

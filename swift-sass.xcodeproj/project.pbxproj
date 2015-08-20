@@ -113,7 +113,7 @@
 		FD3A8D3E1B85D22E0069BB59 /* sass_functions.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D381B85D22E0069BB59 /* sass_functions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD3A8D3F1B85D22E0069BB59 /* sass_values.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D391B85D22E0069BB59 /* sass_values.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD3A8D401B85D22E0069BB59 /* sass_version.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D3A1B85D22E0069BB59 /* sass_version.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FD3A8D421B85D5FA0069BB59 /* sass_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D411B85D5FA0069BB59 /* sass_interface.h */; };
+		FD3A8D421B85D5FA0069BB59 /* sass_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8D411B85D5FA0069BB59 /* sass_interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD3A8D4A1B85D88C0069BB59 /* SwiftSassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8D491B85D88C0069BB59 /* SwiftSassTests.swift */; };
 		FD3A8D4C1B85D88C0069BB59 /* SwiftSass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3A8C351B847CEC0069BB59 /* SwiftSass.framework */; };
 		FD3A8D531B85DAD90069BB59 /* main.scss in Resources */ = {isa = PBXBuildFile; fileRef = FD3A8D521B85DAD90069BB59 /* main.scss */; };
