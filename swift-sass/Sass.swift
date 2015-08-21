@@ -72,14 +72,17 @@ private struct SassFileCompiler: SassCompiler {
 private struct SassStringCompiler: SassCompiler {
     let string: String
     
-    func compile(options: SassOptions?) throws -> String {
-        
+    func createContext(string: String) -> COpaquePointer {
         // copy string to allow libsass to take ownership
         var cString = self.string.cStringUsingEncoding(NSUTF8StringEncoding)!
         let pointer = UnsafeMutablePointer<Int8>.alloc(cString.count)
         memcpy(pointer, cString, cString.count)
-        let context = sass_make_data_context(pointer)
         
+        return sass_make_data_context(pointer)
+    }
+    
+    func compile(options: SassOptions?) throws -> String {
+        let context = self.createContext(self.string)
         if let options = options {
             options.applyToDataContext(context)
         }
