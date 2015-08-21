@@ -13,25 +13,24 @@ enum SassError: ErrorType {
 }
 
 public struct Sass {
-    public static func compileFile(path: String, includePath: String? = nil) throws -> String {
+    public static func compileFile(path: String, options: SassOptions? = nil) throws -> String {
         let compiler = SassFileCompiler(filePath: path)
-        let options = SassOptions(includePath: includePath)
         return try compiler.compile(options)
     }
     
-    public static func compile(scss: String, includePath: String? = nil) throws -> String {
+    public static func compile(scss: String, options: SassOptions? = nil) throws -> String {
         let compiler = SassStringCompiler(string: scss)
-        let options = SassOptions(includePath: includePath)
         return try compiler.compile(options)
     }
 }
 
 public struct SassOptions {
     public var includePath: String?
-//    public var precision: Int?
+    public var precision: Int?
     
     func applyToFileContext(context: COpaquePointer) {
-        
+        let options = sass_file_context_get_options(context)
+        self.applyToOptions(options)
     }
     
     func applyToDataContext(context: COpaquePointer) {
@@ -43,20 +42,26 @@ public struct SassOptions {
         if let path = self.includePath {
             sass_option_set_include_path(options, path)
         }
+        
+        if let precision = self.precision {
+            sass_option_set_precision(options, Int32(precision))
+        }
     }
 }
 
 protocol SassCompiler {
-    func compile(options: SassOptions) throws -> String
+    func compile(options: SassOptions?) throws -> String
 }
 
 
 private struct SassFileCompiler: SassCompiler {
     let filePath: String
     
-    func compile(options: SassOptions) throws -> String {
+    func compile(options: SassOptions?) throws -> String {
         let context = sass_make_file_context(self.filePath)
-        options.applyToFileContext(context)
+        if let options = options {
+            options.applyToFileContext(context)
+        }
         
         sass_compile_file_context(context)
         
@@ -67,13 +72,17 @@ private struct SassFileCompiler: SassCompiler {
 private struct SassStringCompiler: SassCompiler {
     let string: String
     
-    func compile(options: SassOptions) throws -> String {
-        var cString = self.string.cStringUsingEncoding(NSUTF8StringEncoding)!
+    func compile(options: SassOptions?) throws -> String {
+        
         // copy string to allow libsass to take ownership
+        var cString = self.string.cStringUsingEncoding(NSUTF8StringEncoding)!
         let pointer = UnsafeMutablePointer<Int8>.alloc(cString.count)
         memcpy(pointer, cString, cString.count)
         let context = sass_make_data_context(pointer)
-        options.applyToDataContext(context)
+        
+        if let options = options {
+            options.applyToDataContext(context)
+        }
         
         sass_compile_data_context(context)
         
@@ -85,7 +94,6 @@ private struct SassStringCompiler: SassCompiler {
 private struct SassValidator {
     static func validateOutput(context: COpaquePointer) throws -> String {
         if let error = String.fromCString(sass_context_get_error_message(context)) {
-            print("error code: \(sass_context_get_error_status(context))")
             throw SassError.SyntaxError(error)
         }
         
