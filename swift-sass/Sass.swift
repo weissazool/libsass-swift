@@ -28,6 +28,8 @@ public struct SassOptions {
     public var includePath: String?
     public var precision: Int?
     
+    public init() {}
+    
     func applyToFileContext(context: COpaquePointer) {
         let options = sass_file_context_get_options(context)
         self.applyToOptions(options)
