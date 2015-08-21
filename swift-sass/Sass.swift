@@ -14,138 +14,76 @@ enum SassError: ErrorType {
 
 public struct Sass {
     public static func compileFile(path: String, includePath: String? = nil) throws -> String {
-        
-        let context = sass_make_file_context(path)
-        
-        if let includePath = includePath {
-            let options = sass_file_context_get_options(context)
-            sass_option_set_include_path(options, includePath)
-        }
-        
-        sass_compile_file_context(context)
-        print("error status: \(sass_context_get_error_status(context))")
-        if sass_context_get_error_status(context) == 1 {
-            let message = String.fromCString(sass_context_get_error_message(context)) ?? "Unknown error"
-            throw SassError.SyntaxError(message)
-        }
-        
-        let output = sass_context_get_output_string(context)
-        let outputString = String.fromCString(output)!
-        
-        sass_delete_file_context(context)
-        
-        return outputString
+        let compiler = SassFileCompiler(filePath: path)
+        let options = SassOptions(includePath: includePath)
+        return try compiler.compile(options)
     }
     
     public static func compile(scss: String, includePath: String? = nil) throws -> String {
-        
-        let compiler = SassCompiler(string: scss)
-        compiler.includePath = includePath
-        return try compiler.compile()
+        let compiler = SassStringCompiler(string: scss)
+        let options = SassOptions(includePath: includePath)
+        return try compiler.compile(options)
     }
 }
 
-public struct SassCompilerOptions {
-    public var includePath: String
+public struct SassOptions {
+    public var includePath: String?
+//    public var precision: Int?
     
     func applyToFileContext(context: COpaquePointer) {
         
     }
     
     func applyToDataContext(context: COpaquePointer) {
-        
+        let options = sass_data_context_get_options(context)
+        self.applyToOptions(options)
     }
     
     private func applyToOptions(options: COpaquePointer) {
-        
+        if let path = self.includePath {
+            sass_option_set_include_path(options, path)
+        }
     }
 }
 
-//protocol SassCompilerr {
-//    func compile(options: SassCompilerOptions) throws -> String
-//}
-//
-//
-//private struct SassFileCompiler: SassCompilerr {
-//    let filePath: String
-//    
-//    func compile(options: SassCompilerOptions) throws -> String {
-//        let context = sass_make_file_context(self.filePath)
-//        options.applyToFileContext(context)
-//        
-//        sass_compile_file_context(context)
-//        
-//        
-//    }
-//}
-//
-
-
-private enum SassCompilerType {
-    case File
-    case String
+protocol SassCompiler {
+    func compile(options: SassOptions) throws -> String
 }
 
-private class SassCompiler {
-    private let type: SassCompilerType
-    let filePath: String?
-    let string: String?
-    private let context: COpaquePointer
+
+private struct SassFileCompiler: SassCompiler {
+    let filePath: String
     
-    var options: COpaquePointer {
-        switch self.type {
-        case .File:
-            return sass_file_context_get_options(self.context)
-        case .String:
-            return sass_data_context_get_options(self.context)
-        }
-    }
-    
-    var includePath: String? {
-        didSet {
-            if let path = self.includePath {
-                sass_option_set_include_path(self.options, path)
-            }
-        }
-    }
-    
-    init(filePath: String) {
-        self.type = .File
-        self.filePath = filePath
-        self.string = nil
+    func compile(options: SassOptions) throws -> String {
+        let context = sass_make_file_context(self.filePath)
+        options.applyToFileContext(context)
         
-        self.context = sass_make_file_context(filePath)
-    }
-    
-    init(string: String) {
-        self.type = .String
-        self.string = string
-        self.filePath = nil
+        sass_compile_file_context(context)
         
-        var cString = string.cStringUsingEncoding(NSUTF8StringEncoding)!
+        return try SassValidator.validateOutput(context)
+    }
+}
+
+private struct SassStringCompiler: SassCompiler {
+    let string: String
+    
+    func compile(options: SassOptions) throws -> String {
+        var cString = self.string.cStringUsingEncoding(NSUTF8StringEncoding)!
         // copy string to allow libsass to take ownership
         let pointer = UnsafeMutablePointer<Int8>.alloc(cString.count)
         memcpy(pointer, cString, cString.count)
-        self.context = sass_make_data_context(pointer)
-    }
-    
-    deinit {
-        switch self.type {
-        case .File:
-            sass_delete_file_context(self.context)
-        case .String:
-            sass_delete_data_context(self.context)
-        }
-    }
-    
-    func compile() throws -> String {
-        switch self.type {
-        case .File:
-            sass_compile_file_context(self.context)
-        case .String:
-            sass_compile_data_context(self.context)
-        }
+        let context = sass_make_data_context(pointer)
+        options.applyToDataContext(context)
         
+        sass_compile_data_context(context)
+        
+        return try SassValidator.validateOutput(context)
+    }
+}
+
+
+private struct SassValidator {
+    static func validateOutput(context: COpaquePointer) throws -> String {
         if let error = String.fromCString(sass_context_get_error_message(context)) {
             print("error code: \(sass_context_get_error_status(context))")
             throw SassError.SyntaxError(error)
