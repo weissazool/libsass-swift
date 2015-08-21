@@ -20,7 +20,9 @@ class SwiftSassTests: XCTestCase {
     func testString() {
         let path = NSBundle(forClass: self.dynamicType).pathForResource("main", ofType: "scss")
         let string = try! String(contentsOfFile: path!)
-        let output = try! Sass.compile(string)
-        print("output: \(output)")
+        XCTempAssertNoThrowError() {
+            let output = try Sass.compile(string, includePath: path!.stringByDeletingLastPathComponent)
+            print("output: \(output)")
+        }
     }
 }

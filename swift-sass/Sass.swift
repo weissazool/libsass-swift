@@ -13,9 +13,15 @@ enum SassError: ErrorType {
 }
 
 public struct Sass {
-    public static func compileFile(path: String) throws -> String {
+    public static func compileFile(path: String, includePath: String? = nil) throws -> String {
         
         let context = sass_make_file_context(path)
+        
+        if let includePath = includePath {
+            let options = sass_file_context_get_options(context)
+            sass_option_set_include_path(options, includePath)
+        }
+        
         sass_compile_file_context(context)
         
         if let error = String.fromCString(sass_context_get_error_message(context)) {
@@ -30,15 +36,21 @@ public struct Sass {
         return outputString
     }
     
-    public static func compile(scss: String) throws -> String {
+    public static func compile(scss: String, includePath: String? = nil) throws -> String {
         
         var cString = scss.cStringUsingEncoding(NSUTF8StringEncoding)!
         
-        // copy string to prevent memory issue
+        // copy string to allow libsass to take ownership
         let pointer = UnsafeMutablePointer<Int8>.alloc(cString.count)
         memcpy(pointer, cString, cString.count)
         
         let context = sass_make_data_context(pointer)
+        
+        if let includePath = includePath {
+            let options = sass_data_context_get_options(context)
+            sass_option_set_include_path(options, includePath)
+        }
+        
         sass_compile_data_context(context)
         
         if let error = String.fromCString(sass_context_get_error_message(context)) {

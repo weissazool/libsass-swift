@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD37C9E41B871AA100A135DC /* _normalize.scss in Resources */ = {isa = PBXBuildFile; fileRef = FD37C9E31B871AA100A135DC /* _normalize.scss */; };
+		FD37C9E81B87283700A135DC /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37C9E71B87283700A135DC /* TestHelpers.swift */; };
 		FD3A8C391B847CEC0069BB59 /* SwiftSass.h in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C381B847CEC0069BB59 /* SwiftSass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD3A8C411B847D1C0069BB59 /* Sass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3A8C401B847D1C0069BB59 /* Sass.swift */; };
 		FD3A8CD11B85D1EA0069BB59 /* ast_def_macros.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FD3A8C6B1B85D1EA0069BB59 /* ast_def_macros.hpp */; };
@@ -130,6 +132,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD37C9E31B871AA100A135DC /* _normalize.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _normalize.scss; sourceTree = "<group>"; };
+		FD37C9E71B87283700A135DC /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		FD3A8C351B847CEC0069BB59 /* SwiftSass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD3A8C381B847CEC0069BB59 /* SwiftSass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSass.h; sourceTree = "<group>"; };
 		FD3A8C3A1B847CEC0069BB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -457,8 +461,10 @@
 			isa = PBXGroup;
 			children = (
 				FD3A8D491B85D88C0069BB59 /* SwiftSassTests.swift */,
+				FD37C9E71B87283700A135DC /* TestHelpers.swift */,
 				FD3A8D4B1B85D88C0069BB59 /* Info.plist */,
 				FD3A8D521B85DAD90069BB59 /* main.scss */,
+				FD37C9E31B871AA100A135DC /* _normalize.scss */,
 			);
 			path = SwiftSassTests;
 			sourceTree = "<group>";
@@ -624,6 +630,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3A8D531B85DAD90069BB59 /* main.scss in Resources */,
+				FD37C9E41B871AA100A135DC /* _normalize.scss in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +693,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3A8D4A1B85D88C0069BB59 /* SwiftSassTests.swift in Sources */,
+				FD37C9E81B87283700A135DC /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,6 +880,7 @@
 				FD3A8C3F1B847CEC0069BB59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD3A8D4F1B85D88C0069BB59 /* Build configuration list for PBXNativeTarget "SwiftSassTests" */ = {
 			isa = XCConfigurationList;
@@ -880,6 +889,7 @@
 				FD3A8D511B85D88C0069BB59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
