@@ -24,7 +24,7 @@ class SwiftSassTests: XCTestCase {
         let string = try! String(contentsOfFile: path!)
         XCTempAssertNoThrowError() {
             var options = SassOptions()
-            options.includePath = path!.stringByDeletingLastPathComponent
+            options.includePath = (path! as NSString).stringByDeletingLastPathComponent
             let output = try Sass.compile(string, options: options)
             print("output: \(output)")
         }

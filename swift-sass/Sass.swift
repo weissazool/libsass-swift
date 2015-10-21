@@ -61,6 +61,7 @@ private struct SassFileCompiler: SassCompiler {
     
     func compile(options: SassOptions?) throws -> String {
         let context = sass_make_file_context(self.filePath)
+        defer { sass_delete_file_context(context) }
         if let options = options {
             options.applyToFileContext(context)
         }
@@ -76,7 +77,7 @@ private struct SassStringCompiler: SassCompiler {
     
     func createContext(string: String) -> COpaquePointer {
         // copy string to allow libsass to take ownership
-        var cString = self.string.cStringUsingEncoding(NSUTF8StringEncoding)!
+        let cString = self.string.cStringUsingEncoding(NSUTF8StringEncoding)!
         let pointer = UnsafeMutablePointer<Int8>.alloc(cString.count)
         memcpy(pointer, cString, cString.count)
         
@@ -85,6 +86,7 @@ private struct SassStringCompiler: SassCompiler {
     
     func compile(options: SassOptions?) throws -> String {
         let context = self.createContext(self.string)
+        defer { sass_delete_data_context(context) }
         if let options = options {
             options.applyToDataContext(context)
         }
