@@ -2036,8 +2036,11 @@ namespace Sass {
     }
     const Simple_Selector* base() const {
       if (length() == 0) return 0;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpotentially-evaluated-expression"
       if (typeid(*(*this)[0]) == typeid(Type_Selector))
         return (*this)[0];
+#pragma clang diagnostic pop
 //      else cerr << "SERIOUSELY " << "\n";
       return 0;
     }
@@ -2053,8 +2056,11 @@ namespace Sass {
     }
     bool is_empty_reference()
     {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpotentially-evaluated-expression"
       return length() == 1 &&
              typeid(*(*this)[0]) == typeid(Parent_Selector);
+#pragma clang diagnostic pop
     }
     std::vector<std::string> to_str_vec(); // sometimes need to convert to a flat "by-value" data structure
 

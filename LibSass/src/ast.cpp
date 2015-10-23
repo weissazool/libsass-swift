@@ -273,16 +273,22 @@ namespace Sass {
     {
       for (i = 0, L = rhs->length(); i < L; ++i)
       {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpotentially-evaluated-expression"
         if ((typeid(*(*rhs)[i]) == typeid(Pseudo_Selector) || typeid(*(*rhs)[i]) == typeid(Wrapped_Selector)) && (*rhs)[L-1]->is_pseudo_element())
         { found = true; break; }
+#pragma clang diagnostic pop
       }
     }
     else
     {
       for (i = 0, L = rhs->length(); i < L; ++i)
       {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpotentially-evaluated-expression"
         if (typeid(*(*rhs)[i]) == typeid(Pseudo_Selector) || typeid(*(*rhs)[i]) == typeid(Wrapped_Selector))
         { found = true; break; }
+#pragma clang diagnostic pop
       }
     }
     if (!found)
@@ -543,8 +549,8 @@ namespace Sass {
           if (wrapped->name() == wrapped_r->name()) {
           if (wrapped->is_superselector_of(wrapped_r)) {
              continue;
-             rset.insert(lhs->perform(&to_string));
-
+              // NOTE: commented this out because it will never be executed
+//             rset.insert(lhs->perform(&to_string));
           }}
         }
       }
@@ -827,24 +833,24 @@ namespace Sass {
   {
     // create a new complex selector to return a processed copy
     return this;
-    Complex_Selector* ss = new (ctx.mem) Complex_Selector(this->pstate());
-    //ss->has_line_feed(this->has_line_feed());
-    ss->combinator(this->combinator());
-    if (this->tail()) {
-      ss->tail(this->tail()->parentize(ctx));
-    }
-    if (Compound_Selector* head = this->head()) {
-      // now add everything expect parent selectors to head
-      ss->head(new (ctx.mem) Compound_Selector(head->pstate()));
-      for (size_t i = 0, L = head->length(); i < L; ++i) {
-        if (!dynamic_cast<Parent_Selector*>((*head)[i])) {
-          *ss->head() << (*head)[i];
-        }
-      }
-      // if (ss->head()->empty()) ss->head(0);
-    }
-    // return copy
-    return ss;
+//    Complex_Selector* ss = new (ctx.mem) Complex_Selector(this->pstate());
+//    //ss->has_line_feed(this->has_line_feed());
+//    ss->combinator(this->combinator());
+//    if (this->tail()) {
+//      ss->tail(this->tail()->parentize(ctx));
+//    }
+//    if (Compound_Selector* head = this->head()) {
+//      // now add everything expect parent selectors to head
+//      ss->head(new (ctx.mem) Compound_Selector(head->pstate()));
+//      for (size_t i = 0, L = head->length(); i < L; ++i) {
+//        if (!dynamic_cast<Parent_Selector*>((*head)[i])) {
+//          *ss->head() << (*head)[i];
+//        }
+//      }
+//      // if (ss->head()->empty()) ss->head(0);
+//    }
+//    // return copy
+//    return ss;
   }
 
   Selector_List* Selector_List::parentize(Context& ctx)

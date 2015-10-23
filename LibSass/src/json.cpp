@@ -687,7 +687,7 @@ static bool parse_value(const char **sp, JsonNode **out)
       return false;
 
     default: {
-      double num;
+      double num = 0.0;
       if (parse_number(&s, out ? &num : NULL)) {
         if (out)
           *out = json_mknumber(num);

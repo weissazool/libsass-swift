@@ -31,7 +31,7 @@ namespace Sass {
   inline double sub(double x, double y) { return x - y; }
   inline double mul(double x, double y) { return x * y; }
   inline double div(double x, double y) { return x / y; } // x/0 checked by caller
-  inline double mod(double x, double y) { return abs(fmod(x, y)); } // x/0 checked by caller
+  inline double mod(double x, double y) { return fabs(fmod(x, y)); } // x/0 checked by caller
   typedef double (*bop)(double, double);
   bop ops[Sass_OP::NUM_OPS] = {
     0, 0, // and, or
@@ -571,12 +571,15 @@ namespace Sass {
       To_String to_string(&ctx);
       // Special cases: +/- variables which evaluate to null ouput just +/-,
       // but +/- null itself outputs the string
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpotentially-evaluated-expression"
       if (operand->concrete_type() == Expression::NULL_VAL && typeid(*(u->operand())) == typeid(Variable)) {
         u->operand(new (ctx.mem) String_Quoted(u->pstate(), ""));
       }
       else u->operand(operand);
       String_Constant* result = new (ctx.mem) String_Quoted(u->pstate(),
                                                               u->perform(&to_string));
+#pragma clang diagnostic pop
       return result;
     }
     // unreachable
