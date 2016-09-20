@@ -12,7 +12,7 @@ import XCTest
 class SwiftSassTests: XCTestCase {
     
     func testFile() {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("main", ofType: "scss")
+        let path = Bundle(for: type(of: self)).path(forResource: "main", ofType: "scss")
         XCTempAssertNoThrowError() {
             let output = try Sass.compileFile(path!)
             print("output: \(output)")
@@ -20,11 +20,11 @@ class SwiftSassTests: XCTestCase {
     }
     
     func testString() {
-        let path = NSBundle(forClass: self.dynamicType).pathForResource("main", ofType: "scss")
+        let path = Bundle(for: type(of: self)).path(forResource: "main", ofType: "scss")
         let string = try! String(contentsOfFile: path!)
         XCTempAssertNoThrowError() {
             var options = SassOptions()
-            options.includePath = (path! as NSString).stringByDeletingLastPathComponent
+            options.includePath = (path! as NSString).deletingLastPathComponent
             let output = try Sass.compile(string, options: options)
             print("output: \(output)")
         }
